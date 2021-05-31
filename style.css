@@ -1,0 +1,99 @@
+body {
+    background: whitesmoke;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.vertical-nav {
+    min-width: 15rem;
+    width: 15rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+    background: darkslateblue;
+}
+.page-content {
+    width: calc(100% - 15rem);
+    margin-left: 15rem;
+    transition: all 0.4s;
+}
+
+#sidebar.active {
+    margin-left: -17rem;
+}
+
+#content.active {
+    width: 100%;
+    margin: 0;
+}
+
+.separator {
+    margin: 3rem 0;
+    border-bottom: 1px dashed #fff;
+}
+
+.text-uppercase {
+    letter-spacing: 0.1em;
+}
+
+.nav-link{
+    text-transform: capitalize;
+    background: darkslateblue;
+    color: lightgray;
+}
+.nav-link:hover{
+    background: darkslateblue;
+    color: white;
+}
+.text-standard{
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -17rem;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+        margin: 0;
+    }
+    #content.active {
+        margin-left: 17rem;
+        width: calc(100% - 17rem);
+    }
+}
+
+.currency-selector {
+    padding-left: 5px;
+    border: 0;
+    appearance:none;
+    background: transparent;
+    color: inherit;
+}
+
+.currency-amount {
+    text-align: right;
+}
+
+.currency-addon {
+    width: 6em;
+    text-align: left;
+    position: relative;
+}
+
+.triangle_border_down {
+    width: 0;
+    height: 0;
+    border-width: 5px 5px 0;
+    border-style: solid;
+    border-color: gray transparent transparent;
+    position: center;
+    float: right;
+    padding-top: -22px;
+}
